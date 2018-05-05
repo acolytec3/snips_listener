@@ -1,6 +1,8 @@
 If you don't know what Snips is, start here: https://snips.gitbook.io/getting-started/ 
 Everything that follows assumes you know what Snips, skills, intents, and MQTT are.
 
+A lot of the base code for this was borrowed from here - https://github.com/tschmidty69/homeassistant-config/blob/master/snips/snips_listener.py
+
 # Basic Snips Listener
 A basic snips handler with dynamic module loading.  
 
