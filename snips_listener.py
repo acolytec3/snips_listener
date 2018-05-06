@@ -46,7 +46,7 @@ def handle_intent(client, userdata, msg):
 	print("data.slots"+str(data['slots']))
 	me,funcName = data['intent']['intentName'].split(':')
 	try:
-		func = import_module(funcName,'./snips_skills')  # Looks in sub-directory of the current directory to find the appropriate skill/module
+		func = import_module(funcName)  # Looks in sub-directory of the current directory to find the appropriate skill/module
 		response = func.run(data)
 		payload = {'sessionId': data.get('sessionId', ''),'text':response}
 		publish.single('hermes/dialogueManager/endSession',payload=json.dumps(payload),hostname=snips.mqtt_host,port=snips.mqtt_port)
